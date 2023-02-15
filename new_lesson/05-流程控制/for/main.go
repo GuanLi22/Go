@@ -3,7 +3,9 @@
 // Written by Gland
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	//	for 循环基本格式
@@ -29,8 +31,32 @@ func main() {
 
 	// 死循环
 
-	for {
+	/*	for {
 		fmt.Println("1")
+	}*/
+
+	//for range 循环 遍历
+
+	s := "Hello长春"
+	for i, v := range s {
+		fmt.Printf("%d %c\n", i, v)
+	}
+
+	//跳出循环
+
+	for i := 0; i < 10; i++ {
+		fmt.Println(i)
+		if i == 5 {
+			break
+		}
+	}
+
+	//跳过循环
+	for i := 0; i < 10; i++ {
+		if i == 5 {
+			continue
+		}
+		fmt.Println(i)
 	}
 
 }
